@@ -1,0 +1,25 @@
+.page-about {
+    .contents {
+        padding-top: 60px;
+    }
+    .about {
+        &-box {
+            background-color: $color-white;
+            padding: 20px;
+        }
+        &-logo {
+            margin: 30px auto;
+            width: 40px;
+        }
+        p {
+            line-height: 2;
+            margin-bottom: 30px;
+        }
+        &-sosial {
+            .snsicons-wrapper {
+                width: 70px;
+                margin: 0 auto;
+            }
+        }
+    }
+}

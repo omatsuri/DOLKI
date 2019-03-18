@@ -1,0 +1,17 @@
+.snsicons {
+    &-wrapper {
+        @extend %clearfix;
+    }
+    &-item {
+        display: inline-block;
+        float: left;
+        img {
+            width: 30px;
+            height: 30px;
+        }
+        &-right {
+            margin-left: 10px;
+        }
+
+    }
+}

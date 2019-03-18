@@ -1,0 +1,57 @@
+.social-share {
+    padding: 20px;
+    .icon-share {
+        width: 20px;
+        height: 20px;
+        background-image: url("../images/icon-heading.svg");
+        background-position: center;
+        display: inline-block;
+        margin-right: 10px;
+        background-color: $color-white;
+    }
+    .icon-share-heading {
+        font-size: 1.4rem;
+        line-height: 20px;
+        vertical-align: top;
+        font-weight: bold;
+        display: inline-block;
+    }
+    ul {
+        padding: 20px 0 0;
+        text-align: center;
+    }
+    li {
+        display: inline-block;
+        &:not(:last-child) {
+            margin-right: 30px;
+        }
+    }
+    .icon-twitter {
+        width: 30px;
+        height: 30px;
+        background-image: url("../images/icon-twitter-share.svg");
+        background-position: center;
+        display: block;
+    }
+    .icon-facebook {
+        width: 30px;
+        height: 30px;
+        background-image: url("../images/icon-facebook-share.svg");
+        background-position: center;
+        display: block;
+    }
+    .icon-hatena {
+        width: 30px;
+        height: 30px;
+        background-image: url("../images/icon-hatena-share.svg");
+        background-position: center;
+        display: block;
+    }
+    .icon-pocket {
+        width: 30px;
+        height: 30px;
+        background-image: url("../images/icon-pocket-share.svg");
+        background-position: center;
+        display: block;
+    }
+}
