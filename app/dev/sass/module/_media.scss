@@ -106,6 +106,9 @@ type
         @include query(414) {
             height: 80px;
         }
+        @include query(1366) {
+            height: 70px;
+        }
     }
     &-image-wrapper {
         width: 35%;
@@ -114,6 +117,9 @@ type
         float: left;
         @include query(414) {
             height: 80px;
+        }
+        @include query(1366) {
+            height: 70px;
         }
     }
     &-image {
@@ -130,11 +136,17 @@ type
         @include query(414) {
             height: 80px;
         }
+        @include query(1366) {
+            height: 70px;
+        }
         a {
             display: block;
             height: 70px;
             @include query(414) {
                 height: 80px;
+            }
+            @include query(1366) {
+                height: 70px;
             }
         }
     }
