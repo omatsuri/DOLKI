@@ -5,4 +5,11 @@
 .contents-inner{
     // width: $size_max; //setting.scssに記述
     margin: 0 3%;
+    @include query(768) {
+        margin: 0 20%;
+    }
+    @include query(1366) {
+        width: 1062px;
+        margin: 0 auto;
+    }
 }

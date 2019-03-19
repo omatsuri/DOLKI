@@ -1,19 +1,33 @@
 .page-about {
     .contents {
         padding-top: 60px;
+        &-inner {
+            @include query(1366) {
+                width: 702px;
+            }
+        }
     }
     .about {
         &-box {
             background-color: $color-white;
             padding: 20px;
+            @include query(1366) {
+                padding: 100px;
+            }
         }
         &-logo {
             margin: 30px auto;
             width: 40px;
+            @include query(1366) {
+                margin-bottom: 60px;
+            }
         }
         p {
             line-height: 2;
             margin-bottom: 30px;
+            @include query(1366) {
+                margin-bottom: 60px;
+            }
         }
         &-sosial {
             .snsicons-wrapper {

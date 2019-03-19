@@ -17,6 +17,7 @@ type
     padding: 10px;
     background-color: $color-white;
     margin-bottom: 30px;
+
     &-image-wrapper {
         width: 100%;
         height: 220px;
@@ -39,12 +40,14 @@ type
     &-category {
         display: inline-block;
         color: $color-gray;
+        font-size: 1rem;
         a {
             color: inherit;
         }
     }
     time {
         position: absolute;
+        font-size: 1rem;
         right: 0;
         color: $color-gray;
     }
@@ -82,6 +85,10 @@ type
     padding: 10px;
     background-color: $color-white;
     margin-bottom: 10px;
+    @include query(1366) {
+        margin-bottom: 0;
+    }
+
     &-rank {
         position: absolute;
         width: 30px;
@@ -96,12 +103,18 @@ type
     &-body {
         height: 70px;
         @extend %clearfix;
+        @include query(414) {
+            height: 80px;
+        }
     }
     &-image-wrapper {
         width: 35%;
         height: 70px;
         margin-right: 10px;
         float: left;
+        @include query(414) {
+            height: 80px;
+        }
     }
     &-image {
         width: 100%;
@@ -114,9 +127,15 @@ type
         width: 65%;
         margin-left: 35%;
         height: 70px;
+        @include query(414) {
+            height: 80px;
+        }
         a {
             display: block;
             height: 70px;
+            @include query(414) {
+                height: 80px;
+            }
         }
     }
 

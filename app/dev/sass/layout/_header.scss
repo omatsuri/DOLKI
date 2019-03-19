@@ -6,11 +6,21 @@
     border-bottom: 1px #fff solid;
     z-index: 1000;
 
+
     &-inner {
         position: fixed;
         width: 100%;
         height: 60px;
-        padding: 10px 3%;
+        // padding: 10px 3%;
+        @include query(1366) {
+            width: 1062px;
+            left: 50%;
+            -webkit-transform: translateX(-50%);
+            -moz-transform: translateX(-50%);
+            -ms-transform: translateX(-50%);
+            -o-transform: translateX(-50%);
+            transform: translateX(-50%);
+        }
     }
 
     &-logo {
@@ -26,16 +36,65 @@
         img {
             width: 100px;
         }
+        @include query(1366) {
+            left: 0;
+            -webkit-transform: translate(0,-50%);
+            -moz-transform: translate(0,-50%);
+            -ms-transform: translate(0,-50%);
+            -o-transform: translate(0,-50%);
+            transform: translate(0,-50%);
+        }
     }
 
     .sp-header-grobalnav {
         display: none;
+        @include query(1366) {
+            display: block;
+
+        }
+    }
+
+    .header-grobalnav {
+        ul {
+            text-align: center;
+        }
+        li {
+            display: inline-block;
+            a {
+                display: block;
+                line-height: 60px;
+                padding: 0 20px;
+                transition: all 0.1s;
+                &:hover {
+                    opacity: 0.5;
+                }
+            }
+        }
+    }
+
+    .header-sosial {
+        display: none;
+        @include query(1366) {
+            display: block;
+            position: absolute;
+            right: 0;
+            top: 50%;
+            -webkit-transform: translate(0,-50%);
+            -moz-transform: translate(0,-50%);
+            -ms-transform: translate(0,-50%);
+            -o-transform: translate(0,-50%);
+            transform: translate(0,-50%);
+        }
+
     }
 
     .hamburgerContainer {
         position: relative;
         width: 100%;
         z-index: 1000;
+        @include query(1366) {
+            display: none;
+        }
     }
     /*-----  ハンバーガー -----*/
     .hamburger {

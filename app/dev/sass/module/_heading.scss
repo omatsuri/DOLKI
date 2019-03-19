@@ -20,6 +20,9 @@ heading
     color: $color-black;
     padding: 30px 0;
     text-align: center;
+    @include query(1366) {
+        padding: 60px 0 40px;
+    }
 
 }
 

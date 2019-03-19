@@ -2,6 +2,26 @@
     .contents {
         padding-top: 60px;
     }
+    .contents-inner{
+        margin: 0 auto;
+    }
+    .main {
+        @extend %clearfix;
+        &-left {
+            @include query(1366) {
+                width: 702px;
+                margin-right: 18px;
+                float: left;
+            }
+        }
+        &-right {
+            @include query(1366) {
+                width: 342px;
+                margin-left: auto;
+                margin-right: 0;
+            }
+        }
+    }
     .writer {
         &-box {
             @extend %clearfix;
@@ -13,6 +33,10 @@
             float: left;
             text-align: center;
             margin:0 2% 2% 0;
+            @include query(1366) {
+                width: 342px;
+                margin:0 18px 18px 0;
+            }
             &-above {
                 padding: 20px;
             }
@@ -24,7 +48,15 @@
             }
         }
         li:nth-child(2n) {
-            margin:0 0 2% 0;
+            margin:0 0 18px 0;
+        }
+        @include query(1366) {
+            li:nth-child(2n) {
+                margin:0 18px 18px 0;
+            }
+            li:nth-child(3n) {
+                margin:0 0 2% 0;
+            }
         }
         &-image {
             margin: 0 auto;
@@ -34,6 +66,10 @@
             background-image: url("../images/keyvisual-sample.jpg");
             background-position: center;
             background-size: cover;
+            @include query(1366) {
+                width: 150px;
+                height: 150px;
+            }
         }
     }
 
@@ -43,6 +79,10 @@
         padding: 30px;
         background-color: $color-white;
         margin-top: 10px;
+        @include query(1366) {
+            margin-top: 0;
+            padding: 100px 150px;
+        }
         &-image {
             margin: 0 auto;
             width: 150px;
@@ -52,6 +92,10 @@
             background-position: center;
             background-size: cover;
             margin-bottom: 30px;
+            @include query(1366) {
+                width: 200px;
+                height: 200px;
+            }
         }
         &-name {
             text-align: center;
@@ -60,15 +104,30 @@
             margin-bottom: 30px;
         }
         &-discription {
-            line-height: 1.6;
+            line-height: 1.8;
         }
     }
     .writer-dtl {
         margin-top: 10px;
+
         .snsicons {
             padding-top: 20px;
             width: 70px;
             margin: 0 auto;
+            &-wrapper {
+                @include query(1366) {
+                    height: 30px;
+                }
+            }
+        }
+    }
+    .media {
+        @include query(1366) {
+            width: 342px;
+            float: left;
+            &:not(:nth-of-type(2n)){
+                margin-right: 18px;
+            }
         }
     }
 }

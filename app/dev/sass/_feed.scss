@@ -2,4 +2,17 @@
     .contents {
         padding-top: 60px;
     }
+    .feed-inner-wrapper {
+        @extend %clearfix;
+    }
+    .media {
+        @include query(1366) {
+            width: 342px;
+            float: left;
+            margin-right: 18px;
+            &:nth-of-type(3n){
+                margin-right: 0;
+            }
+        }
+    }
 }

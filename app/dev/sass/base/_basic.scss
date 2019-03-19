@@ -10,17 +10,4 @@ body {
 	line-height: 1.8;
 	background: #F5F5F5;
 	letter-spacing: 0.1rem;
-	@include query(1024) {
-		font-size: 1.4rem;
-		line-height: 2;
-	}
 }
-
-// .wrapper {
-// 	width: 100%;
-// 	margin: 0 5%;
-// 	@include query(1024) {
-// 		max-width: $size_max;
-// 		margin: 0 152px;
-// 	}
-// }

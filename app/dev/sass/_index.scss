@@ -1,6 +1,32 @@
 .home {
+    .feed-wrapper {
+        @include query(1366) {
+            width: 702px;
+            float: left;
+        }
+        @extend %clearfix;
+    }
+    .feed-inner-wrapper {
+        @extend %clearfix;
+    }
+    .ranking-wrapper {
+        @include query(1366) {
+            width: 342px;
+            margin-right: 0;
+            margin-left: auto;
+        }
+        @extend %clearfix;
+    }
+    .media {
+        @include query(1366) {
+            width: 342px;
+            float: left;
+            &:not(:nth-of-type(2n)){
+                margin-right: 18px;
+            }
+        }
+    }
 }
-
 
 .key-visual {
     width: 100%;
@@ -11,6 +37,15 @@
         background-position: center;
         background-size: cover;
         height: 400px;
+        @include query(360) {
+            height: 500px;
+        }
+        @include query(768) {
+            height: 400px;
+        }
+        @include query(1366) {
+            height: 550px;
+        }
     }
     &-message {
         width: 100%;

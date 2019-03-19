@@ -3,22 +3,43 @@
         padding-top: 60px;
     }
     .contents-inner{
-        margin: 0;
+        margin: 0 auto;
+    }
+    .main {
+        @extend %clearfix;
+        &-left {
+            float: left;
+        }
     }
     .article {
         margin-top: 15px;
         padding-bottom: 15px;
         background-color: $color-white;
+        @include query(1366) {
+            width: 702px;
+            margin-right: 18px;
+            float: left;
+        }
+        &-inner-wrapper {
+            @extend %clearfix;
+        }
         &-header {
             &-wrapper {
                 position: relative;
                 padding: 10px;
+                @include query(1366) {
+                    padding: 30px 50px 10px;
+                }
             }
         }
+
         time {
             position: absolute;
             right: 10px;
             color: $color-gray;
+            @include query(1366) {
+                right: 50px;
+            }
         }
         &-category {
             display: inline-block;
@@ -53,14 +74,24 @@
             position: absolute;
             right: 10px;
             bottom: 10px;
+            @include query(1366) {
+                right: 50px;
+                bottom: 50px;
+            }
         }
         &-headertext {
             margin: 20px 3%;
             line-height: 1.8;
+            @include query(1366) {
+                margin: 20px 50px;
+            }
         }
         &-share {
             border: 1px solid $color-base;
             margin: 20px 10px;
+            @include query(1366) {
+                margin: 20px 50px;
+            }
         }
         &-image {
             width: 100%;
@@ -78,6 +109,9 @@
         &-body {
             margin: 0 3%;
             padding: 30px 0;
+            @include query(1366) {
+                margin: 0 50px 0 180px;
+            }
             h2 {
                 font-size: 1.4rem;
                 font-weight: bold;
@@ -91,12 +125,38 @@
         &-tag {
             border: 1px solid $color-base;
             margin: 20px 10px;
+            @include query(1366) {
+                margin: 20px 50px;
+            }
         }
     }
 
 
     .feed {
         margin: 0 3%;
+        @extend %clearfix;
+        @include query(1366) {
+            width: 720px;
+            margin: 0;
+        }
+        .media {
+            @include query(1366) {
+                width: 342px;
+                float: left;
+                margin-right: 18px;
+                &:nth-of-type(3n){
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+    .ranking-wrapper {
+        @include query(1366) {
+            width: 342px;
+            margin-right: 0;
+            margin-left: auto;
+        }
+        @extend %clearfix;
     }
 
 }

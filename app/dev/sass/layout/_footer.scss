@@ -5,15 +5,25 @@
 .footer {
     // width: 100%;
     border-top: 1px solid $color-white;
+
     &-inner {
         // width: $size_max;
         margin: 0 5% 40px;
         text-align: center;
+        @extend %clearfix;
+        @include query(1366) {
+            width: 1062px;
+            margin: 0 auto 40px;
+        }
     }
 
     &-nav {
         margin-bottom: 50px;
         @extend %clearfix;
+        @include query(1366) {
+            float: right;
+            width: 500px;
+        }
         &-body {
             width: 48%;
             text-align: left;
@@ -47,12 +57,29 @@
         position: absolute;
         width: 100px;
         bottom: 30px;
+        @include query(1366) {
+            top: 30px;
+        }
+    }
+    &-text {
+        @include query(1366) {
+            position: absolute;
+            width: 400px;
+            top: 90px;
+            text-align: left;
+            line-height: 1.8;
+        }
     }
 
     &-sosial {
         position: absolute;
         right: 0;
         bottom: 0;
+        @include query(1366) {
+            right: auto;
+            bottom: auto;
+            top: 190px;
+        }
 
     }
     .copy {
@@ -60,8 +87,14 @@
         bottom: 0;
         text-align: left;
         font-size: 1rem;
+        @include query(1366) {
+            top: 250px;
+        }
     }
     .sp-footer-hidden {
         display: none;
+        @include query(1366) {
+            display: block;
+        }
     }
 }
