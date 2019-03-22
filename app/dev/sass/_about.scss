@@ -1,4 +1,4 @@
-.page-about {
+.page-id-6 {
     .contents {
         padding-top: 60px;
         &-inner {
@@ -19,6 +19,7 @@
             margin: 30px auto;
             width: 40px;
             @include query(1366) {
+                width: 100px;
                 margin-bottom: 60px;
             }
         }

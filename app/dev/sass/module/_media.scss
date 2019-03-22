@@ -56,6 +56,9 @@ type
         font-size: 1.4rem;
         line-height: 1.4;
         font-weight: bold;
+        @include query(1366) {
+            height: 38px;
+        }
     }
     &-writer {
         @extend %clearfix;
@@ -63,9 +66,10 @@ type
             width: 30px;
             height: 30px;
             margin-right: 10px;
-            background-color: #eee;
             border-radius: 50%;
             float: left;
+            background-size: cover;
+            background-position: center;
         }
         &-name {
             line-height: 30px;
@@ -79,6 +83,11 @@ type
         bottom: 0;
     }
 }
+
+.ranking-wrapper {
+    counter-reset: media-s-rank;
+}
+
 .media-s {
     position: relative;
     width: 100%;
@@ -98,7 +107,18 @@ type
         top: 0;
         left: 0;
         background-color: $color-accent;
-        color: $color-white;
+        &:before {
+            content: counter(media-s-rank, decimal);
+            counter-increment: media-s-rank;
+            color: $color-white;
+            position: absolute;
+            width: 30px;
+            line-height: 30px;
+            left: 0;
+            top: 0;
+            z-index: 1;
+        }
+
     }
     &-body {
         height: 70px;

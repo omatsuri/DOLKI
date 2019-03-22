@@ -4,11 +4,19 @@
     }
     .contents-inner{
         margin: 0 auto;
+        @include query(768) {
+        margin: 0 15%;
+        }
+        @include query(1366) {
+        margin: 0 auto;
+        }
     }
     .main {
         @extend %clearfix;
         &-left {
+            @include query(1366) {
             float: left;
+            }
         }
     }
     .article {
@@ -76,7 +84,6 @@
             bottom: 10px;
             @include query(1366) {
                 right: 50px;
-                bottom: 50px;
             }
         }
         &-headertext {
@@ -95,22 +102,21 @@
         }
         &-image {
             width: 100%;
-            height: 100%;
+            height: 200px;
             background-position: center;
             background-size: cover;
+            @include query(768) {
+                height: 400px;
+            }
         }
         &-image-wrapper {
-            .ref {
-                font-size: 1rem;
-                padding-top: 5px;
-                margin: 0 3%;
-            }
         }
         &-body {
             margin: 0 3%;
             padding: 30px 0;
             @include query(1366) {
                 margin: 0 50px 0 180px;
+                width: 472px;
             }
             h2 {
                 font-size: 1.4rem;
@@ -121,6 +127,9 @@
             p {
                 line-height: 1.8;
             }
+            img {
+                width: 100%;
+            }
         }
         &-tag {
             border: 1px solid $color-base;
@@ -128,6 +137,14 @@
             @include query(1366) {
                 margin: 20px 50px;
             }
+            li {
+                margin-right: 5px;
+            }
+        }
+        .wp-caption-text {
+            font-size: 1rem;
+            padding-top: 5px;
+            margin: 0 3%;
         }
     }
 
