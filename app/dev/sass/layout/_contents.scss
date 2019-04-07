@@ -6,10 +6,17 @@
     // width: $size_max; //setting.scssに記述
     margin: 0 3%;
     @include query(768) {
-        margin: 0 20%;
+        margin: 0 auto;
     }
-    @include query(1366) {
+    @include query(1200) {
         width: 1062px;
         margin: 0 auto;
+    }
+}
+.page404 {
+    padding: 90px 0;
+    p {
+        margin: 100px 0;
+        text-align: center;
     }
 }

@@ -10,7 +10,7 @@
                                         <img src="<?php bloginfo('template_directory'); ?>/images/icon/icon-dolki-logotext-above.svg" alt="">
                                     </div>
                                     <p>
-                                        『DOLKI』は、日本の女性アイドルに関する情報をお届けするメディアです。地上アイドルから地下アイドルまで幅広く発信します。ライブ情報は？オタクの現場ってどんな感じ？貴族(ドルオタ)たちが今知りたい最新記事やアーカイヴ記事などを発信していきます。
+                                        『dolki』は、アイドルに関する情報をお届けするメディアです。地上アイドルから地下アイドルまで幅広く発信します。ライブ情報は？オタクの現場ってどんな感じ？貴族(ドルオタ)たちが今知りたい最新記事やアーカイヴ記事などを発信していきます。
                                     </p>
                                     <div class="about-sosial snsicons">
                                         <div class="snsicons-wrapper">

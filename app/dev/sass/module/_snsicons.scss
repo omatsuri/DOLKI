@@ -8,7 +8,7 @@
         img {
             width: 30px;
             height: 30px;
-            @include query(1366) {
+            @include query(1200) {
                 width: 25px;
                 height: 25px;
             }

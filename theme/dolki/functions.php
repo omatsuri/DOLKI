@@ -76,22 +76,23 @@ function pagination( $pages, $paged, $range = 2, $show_only = false ) {
     }
 }
 
-/* カテゴリーURLから「category」を削除
----------------------------------------------------------- */
-add_filter('user_trailingslashit', 'remcat_function');
-function remcat_function($link) {
-	return str_replace("/category/", "/", $link);
-}
-add_action('init', 'remcat_flush_rules');
-function remcat_flush_rules() {
-	global $wp_rewrite;
-	$wp_rewrite->flush_rules();
-}
-add_filter('generate_rewrite_rules', 'remcat_rewrite');
-function remcat_rewrite($wp_rewrite) {
-	$new_rules = array('(.+)/page/(.+)/?' => 'index.php?category_name='.$wp_rewrite->preg_index(1).'&paged='.$wp_rewrite->preg_index(2));
-	$wp_rewrite->rules = $new_rules + $wp_rewrite->rules;
-}
+// /* カテゴリーURLから「category」を削除
+// ---------------------------------------------------------- */
+// add_filter('user_trailingslashit', 'remcat_function');
+// function remcat_function($link) {
+// 	return str_replace("/category/", "/", $link);
+// }
+// add_action('init', 'remcat_flush_rules');
+// function remcat_flush_rules() {
+// 	global $wp_rewrite;
+// 	$wp_rewrite->flush_rules();
+// }
+// add_filter('generate_rewrite_rules', 'remcat_rewrite');
+// function remcat_rewrite($wp_rewrite) {
+// 	$new_rules = array('(.+)/page/(.+)/?' => 'index.php?category_name='.$wp_rewrite->preg_index(1).'&paged='.$wp_rewrite->preg_index(2));
+// 	$wp_rewrite->rules = $new_rules + $wp_rewrite->rules;
+// }
+
 
 
 function custom_single_popular_post( $content, $p, $instance ){
@@ -132,3 +133,14 @@ function getPostViews($post_id = null) {
     }
     return $view_count.' Views';  //'Views' の部分は好きな表示に変えてください。
 }
+
+//embed カスタマイズ
+//埋め込み部分削除
+remove_action( 'embed_head', 'print_embed_styles' );
+remove_action( 'embed_footer', 'print_embed_sharing_dialog' );
+
+//embed css読み込み
+function my_embed_styles() {
+  wp_enqueue_style( 'wp-oembed-embed', '/wp-content/themes/dolki/css/wp-oembed-embed.css' );
+}
+add_action( 'embed_head', 'my_embed_styles' );

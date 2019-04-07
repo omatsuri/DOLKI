@@ -1,5 +1,6 @@
 .page-id-10,
-.page-id-12 {
+.page-id-12,
+.page-id-14 {
     .contents {
         padding-top: 60px;
     }
@@ -9,18 +10,31 @@
     .main {
         @extend %clearfix;
         &-left {
-            @include query(1366) {
+          @include query(768) {
+              width: 60%;
+              margin-right: 12px;
+              float: left;
+          }
+            @include query(1200) {
                 width: 702px;
                 margin-right: 18px;
                 float: left;
             }
         }
         &-right {
-            @include query(1366) {
+          @include query(768) {
+              width: 37%;
+              margin-left: auto;
+              margin-right: 0;
+          }
+            @include query(1200) {
                 width: 342px;
                 margin-left: auto;
                 margin-right: 0;
             }
+        }
+        &-wrapper {
+          // @extend %clearfix;
         }
     }
     .writer {
@@ -34,7 +48,11 @@
             float: left;
             text-align: center;
             margin:0 2% 2% 0;
-            @include query(1366) {
+            @include query(768) {
+                width: 31%;
+                margin:0 3% 18px 0;
+            }
+            @include query(1200) {
                 width: 342px;
                 margin:0 18px 18px 0;
             }
@@ -51,7 +69,7 @@
         li:nth-child(2n) {
             margin:0 0 18px 0;
         }
-        @include query(1366) {
+        @include query(1200) {
             li:nth-child(2n) {
                 margin:0 18px 18px 0;
             }
@@ -79,7 +97,11 @@
         padding: 30px;
         background-color: $color-white;
         margin-top: 10px;
-        @include query(1366) {
+        @include query(768) {
+            margin-top: 0;
+            padding: 100px 100px;
+        }
+        @include query(1200) {
             margin-top: 0;
             padding: 100px 150px;
         }
@@ -88,14 +110,9 @@
             width: 150px;
             height: 150px;
             border-radius: 50%;
-            background-image: url("../images/keyvisual-sample.jpg");
             background-position: center;
             background-size: cover;
             margin-bottom: 30px;
-            @include query(1366) {
-                width: 200px;
-                height: 200px;
-            }
         }
         &-name {
             text-align: center;
@@ -115,19 +132,100 @@
             width: 70px;
             margin: 0 auto;
             &-wrapper {
-                @include query(1366) {
+                @include query(768) {
                     height: 30px;
                 }
             }
         }
     }
+    .feed {
+      @include query(768) {
+          width: 60%;
+          margin-right: 12px;
+          float: left;
+      }
+        @include query(1200) {
+            width: 702px;
+            margin-right: 18px;
+            float: left;
+        }
+    }
     .media {
-        @include query(1366) {
+      @include query(768) {
+          width: 49%;
+          float: left;
+          &:not(:nth-of-type(2n)){
+              margin-right: 2%;
+          }
+      }
+        @include query(1200) {
             width: 342px;
             float: left;
             &:not(:nth-of-type(2n)){
                 margin-right: 18px;
             }
         }
+    }
+    .ranking-wrapper {
+      @include query(768) {
+          width: 37%;
+          margin-right: 0;
+          margin-left: auto;
+      }
+        @include query(1200) {
+            width: 342px;
+            margin-right: 0;
+            margin-left: auto;
+        }
+        @extend %clearfix;
+    }
+    .career {
+        .card-A-heading {
+            padding-bottom: 20px;
+        }
+        &-box {
+            position: relative;
+        }
+        &-item {
+            margin-bottom: 15px;
+            @extend %clearfix;
+            ul {
+                padding-top: 0;
+            }
+            li {
+                margin-bottom: 10px;
+                display: block;
+            }
+        }
+
+
+        &-line {
+            position: absolute;
+            width: 30%;
+            height: 90%;
+            transform: translateY(2px);
+            border-right: 1px solid $color-black;
+        }
+        &-dot {
+            position: absolute;
+            left: 30%;
+            transform: translate(-50%, 2px);
+            display: inline-block;
+            width: 11px;
+            height: 11px;
+            border-radius: 50%;
+            background-color: $color-accent;
+        }
+        &-year {
+            position: absolute;
+            text-align: right;
+            left: 10%;
+            display: inline-block;
+        }
+        &-artist {
+            width: 60%;
+            float: right;
+        }
+
     }
 }

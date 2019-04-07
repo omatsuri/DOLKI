@@ -1,0 +1,30 @@
+.wp-embed {
+  width: 100%;
+  text-decoration: none;
+}
+
+.wp-embed-featured-image {
+    float: left;
+  overflow: hidden;
+  width: 100px;
+}
+a, a:visited {
+    font-family: -apple-system, BlinkMacSystemFont, 'Roboto', YuGothic, 游ゴシック, 'Noto Sans JP', Verdana, Meiryo, "M+ 1p", sans-serif;
+    color: #000000;
+    font-size: 14px;
+    display: block;
+}
+
+.wp-embed-featured-image img {
+  vertical-align: bottom;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+.wp-embed-heading {
+  display: inline-block;
+  vertical-align: middle;
+  padding-left: 10px;
+  height: 70px;
+}

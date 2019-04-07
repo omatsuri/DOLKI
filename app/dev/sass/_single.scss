@@ -1,20 +1,27 @@
 .single {
+    strong {
+      font-weight: bold;
+    }
+    em {
+      font-style: italic;
+    }
+
+
     .contents {
         padding-top: 60px;
     }
     .contents-inner{
         margin: 0 auto;
-        @include query(768) {
-        margin: 0 15%;
-        }
-        @include query(1366) {
-        margin: 0 auto;
-        }
     }
     .main {
         @extend %clearfix;
         &-left {
-            @include query(1366) {
+            @include query(768) {
+              width: 60%;
+            float: left;
+            }
+            @include query(1200) {
+              width: auto;
             float: left;
             }
         }
@@ -23,7 +30,12 @@
         margin-top: 15px;
         padding-bottom: 15px;
         background-color: $color-white;
-        @include query(1366) {
+        @include query(768) {
+            width: 100%;
+            margin-right: 12px;
+            float: left;
+        }
+        @include query(1200) {
             width: 702px;
             margin-right: 18px;
             float: left;
@@ -35,7 +47,7 @@
             &-wrapper {
                 position: relative;
                 padding: 10px;
-                @include query(1366) {
+                @include query(768) {
                     padding: 30px 50px 10px;
                 }
             }
@@ -45,7 +57,7 @@
             position: absolute;
             right: 10px;
             color: $color-gray;
-            @include query(1366) {
+            @include query(768) {
                 right: 50px;
             }
         }
@@ -82,21 +94,21 @@
             position: absolute;
             right: 10px;
             bottom: 10px;
-            @include query(1366) {
+            @include query(768) {
                 right: 50px;
             }
         }
         &-headertext {
             margin: 20px 3%;
             line-height: 1.8;
-            @include query(1366) {
+            @include query(768) {
                 margin: 20px 50px;
             }
         }
         &-share {
             border: 1px solid $color-base;
             margin: 20px 10px;
-            @include query(1366) {
+            @include query(768) {
                 margin: 20px 50px;
             }
         }
@@ -114,7 +126,7 @@
         &-body {
             margin: 0 3%;
             padding: 30px 0;
-            @include query(1366) {
+            @include query(1200) {
                 margin: 0 50px 0 180px;
                 width: 472px;
             }
@@ -128,17 +140,81 @@
                 line-height: 1.8;
             }
             img {
+              max-width: 100% !important;
+              height: auto !important;
                 width: 100%;
             }
+            a {
+                text-decoration: underline dotted;
+                transition: all 0.3s;
+                &:after {
+                    font-family:'Font Awesome 5 Free';
+                    content: '\f24d';
+                    font-weight: 400;
+                    margin-left: 3px;
+                }
+                &:hover {
+                    color: $color-accent;
+                }
+            }
+            .wp-caption {
+              max-width: 100% !important;
+            }
+            blockquote{
+              position:relative;
+              border:1px solid $color-gray;
+              background: $color-white;
+              margin-top: 30px;
+              padding:20px;
+            }
+            blockquote:before{
+              position:absolute;
+              left:45%;
+              top:-24px;
+              background-color: $color-accent;
+              color: $color-white;
+              border:2px solid $color-accent;
+              box-sizing:border-box;
+              font-family:'Font Awesome 5 Free';
+              content:'\f10d';
+              font-weight: 900;
+              line-height:1;
+              padding-top:12px;
+              text-align:center;
+              width:48px;
+              height:48px;
+              font-size:2rem;
+              border-radius:24px;
+            }
+            blockquote p {
+              color: $color-black;
+            }
+            blockquote cite {
+              display: block;
+              padding-top:10px;
+              font-size: 0.8rem;
+              text-align: right;
+              color: $color-black;
+            }
+
+            .wp-embedded-content {
+                border: 1px solid $color-base;
+                padding: 10px;
+                width: 100%;
+                max-width: 100%;
+                height: 90px;
+                margin-bottom: 20px;
+            }
+
         }
         &-tag {
             border: 1px solid $color-base;
             margin: 20px 10px;
-            @include query(1366) {
+            @include query(768) {
                 margin: 20px 50px;
             }
             li {
-                margin-right: 5px;
+                margin-right: 10px;
             }
         }
         .wp-caption-text {
@@ -152,28 +228,53 @@
     .feed {
         margin: 0 3%;
         @extend %clearfix;
-        @include query(1366) {
+        @include query(768) {
+            width: 100%;
+            margin: 0;
+        }
+        @include query(1200) {
             width: 720px;
             margin: 0;
         }
         .media {
-            @include query(1366) {
-                width: 342px;
-                float: left;
-                margin-right: 18px;
-                &:nth-of-type(3n){
-                    margin-right: 0;
-                }
-            }
+          @include query(768) {
+              width: 49%;
+              float: left;
+              &:not(:nth-of-type(2n)){
+                  margin-right: 2%;
+              }
+          }
+          @include query(1200) {
+              width: 342px;
+              float: left;
+              &:not(:nth-of-type(2n)){
+                  margin-right: 18px;
+              }
+          }
         }
     }
     .ranking-wrapper {
-        @include query(1366) {
+      @include query(768) {
+          width: 37%;
+          margin-right: 0;
+          margin-left: auto;
+      }
+        @include query(1200) {
             width: 342px;
             margin-right: 0;
             margin-left: auto;
         }
         @extend %clearfix;
     }
+
+    .instagram-media{
+        min-width: 300px !important;
+        @include query(375) {
+            width: 100%;
+            margin: 0;
+        }
+    }
+
+
 
 }

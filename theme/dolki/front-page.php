@@ -16,7 +16,7 @@
                         <section class="feed-wrapper">
                             <div class="feed-inner-wrapper">
                                 <h1 class="heading-A">New Feed</h1>
-                                <?php query_posts('posts_per_page=-1'); ?>
+                                <?php query_posts('posts_per_page=10'); ?>
                                 <?php if(have_posts()): while(have_posts()):the_post(); ?>
                                 <article class="media">
                                     <div class="media-body">
@@ -66,7 +66,7 @@
                             </div>
 
                             <div class="button-B">
-                                View More
+                                <a href="https://dolki.jp/allfeed/">View More</a>
                             </div>
                         </section>
                         <section class="ranking-wrapper">
@@ -74,16 +74,16 @@
                             <?php
                                 if (function_exists('wpp_get_mostpopular')) {
                                     $arg = array (
-                                    'range' => 'daily',//集計する期間（weekly,monthly,all）
+                                    'range' => 'monthly',//集計する期間（weekly,monthly,all）
                                     'order_by' => 'views',//閲覧数で集計（comments（コメント数で集計）,avg（1日の平均で集計））
-                                    'post_type' => 'post,page',//ポストタイプを指定（post,page,カスタムポスト名）
+                                    'post_type' => 'post',//ポストタイプを指定（post,page,カスタムポスト名）
                                     'title_length' => '25',//表示させるタイトル文字数
                                     'excerpt_length' => '55',//抜粋文字数
                                     'stats_comments' => '1',//コメント数表示（1 or 0）
                                     'limit' => 10, //表示数
                                     'stats_views' => '0',//閲覧数表示（1 or 0）
-                                    'thumbnail_width' => '15',//サムネイルの幅
-                                    'thumbnail_height' => '15',//サムネイルの高さ
+                                    'thumbnail_width' => '100',//サムネイルの幅
+                                    'thumbnail_height' => '100',//サムネイルの高さ
                                     'post_html' => ''
                                  );
                                  wpp_get_mostpopular($arg);

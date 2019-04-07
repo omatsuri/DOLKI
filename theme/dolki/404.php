@@ -2,13 +2,8 @@
 <!-- start contents -->
             <main class="contents">
                 <div class="contents-inner">
-                    <div class="pageHeading">
-                        <h1>404 Not Found</h1>
-                    </div>
-					<div class="item">
-						<div class="item-icon">
-							<object type="image/svg+xml" data="<?php bloginfo('template_directory'); ?>/images/404.svg"></object>
-						</div>
+					<div class="page404">
+                        <h1 class="heading-A">404 Not Found</h1>
 	                    <p>ページが見つかりません。</p>
 					</div>
 

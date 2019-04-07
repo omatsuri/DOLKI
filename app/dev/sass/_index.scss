@@ -1,5 +1,9 @@
 .home {
     .feed-wrapper {
+      @include query(768) {
+          width: 66.6%;
+          float: left;
+      }
         @include query(1366) {
             width: 702px;
             float: left;
@@ -10,6 +14,11 @@
         @extend %clearfix;
     }
     .ranking-wrapper {
+      @include query(768) {
+          width: 32%;
+          margin-right: 0;
+          margin-left: auto;
+      }
         @include query(1366) {
             width: 342px;
             margin-right: 0;
@@ -18,6 +27,13 @@
         @extend %clearfix;
     }
     .media {
+      @include query(768) {
+          width: 49%;
+          float: left;
+          &:not(:nth-of-type(2n)){
+              margin-right: 2%;
+          }
+      }
         @include query(1366) {
             width: 342px;
             float: left;
@@ -33,7 +49,7 @@
     padding-top: 60px;
     &-inner {
         position: relative;
-        background-image: url('https://dolki.jp/wp/wp-content/themes/dolki/images/keyvisual-sample.jpg');
+        background-image: url('https://dolki.jp/wp/wp-content/themes/dolki/images/keyvisual.jpg');
         background-position: center;
         background-size: cover;
         height: 400px;
@@ -64,6 +80,7 @@
         transform: translate(-50%,-50%);
         font-size: 2rem;
         font-weight: bold;
+        text-shadow:2px 2px 5px rgba(151,151,151,0.34);
         color: $color-white;
         @include query(1366) {
             font-size: 3rem;

@@ -5,25 +5,49 @@
         <!--[if gt IE 9]><!-->
         <html lang="ja" class="no-js" prefix="og: http://ogp.me/ns#"><!--<![endif]-->
             <head>
+              <!-- Global site tag (gtag.js) - Google Analytics -->
+              <script async src="https://www.googletagmanager.com/gtag/js?id=UA-137427513-1"></script>
+              <script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'UA-137427513-1');
+              </script>
+              <!-- Google Analytics -->
+                <script>
+                (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+                ga('create', 'UA-137427513-1', 'auto');
+                ga('send', 'pageview');
+                </script>
+                <!-- End Google Analytics -->
                 <meta charset="UTF-8">
                 <title>dolki | アイドル情報発信</title>
-                <meta name="description" content="">
-                <meta name="keywords" content="">
+
                 <meta http-equiv="X-UA-Compatible" content="IE=edge">
                 <meta name="viewport"
                       content="width=device-width, minimum-scale=1, maximum-scale=10,initial-scale=1.0">
-                <meta property="og:title" content="伊藤屋">
-                <meta property="og:type" content="website">
-                <meta property="og:url" content="https://itoya1889.com">
-                <meta property="og:image" content="https://dolki.jp/wp/og-image.jpg">
+
                 <link href="https://fonts.googleapis.com/css?family=Baloo+Chettan|Noto+Sans+JP|Permanent+Marker|Roboto" rel="stylesheet">
                 <link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>">
                 <link rel="SHORTCUT ICON" href="https://dolki.jp/wp/favicon.ico" />
+                <link href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" rel="stylesheet">
                 <?php wp_head(); ?>
                 <!-- build:js js/init.min.js -->
                 <script src="<?php bloginfo('template_directory'); ?>/lib/modernizer/modernizr.js"></script>
                 <script src="js/load.js"></script>
                 <!-- endbuild -->
+                <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                <script>
+                  (adsbygoogle = window.adsbygoogle || []).push({
+                    google_ad_client: "ca-pub-8535427977665684",
+                    enable_page_level_ads: true
+                  });
+                </script>
             </head>
 
             <body <?php body_class(); ?> id="top">
